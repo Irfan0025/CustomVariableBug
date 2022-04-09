@@ -11,7 +11,7 @@ import {
     MenuItem,
     MenuItemIcon,
     MenuItemText
-} from 'onsolve-ui-components';
+} from 'apple-ui-components';
 
 import { alertsTranslations, commonTranslations } from 'translations';
 import { withFeatureFlags } from 'modules/Common';
