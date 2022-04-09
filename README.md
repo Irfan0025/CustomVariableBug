@@ -49,3 +49,17 @@ Filename:CreateAlertSaveAsButton
                     </MenuItem>
                 )}
             </Menu>
+
+
+The alertDetails.Variables is an Array that records CustomVariables but it records as soon as a custom variable is created but it should only record if a custom variable is inserted into the body and it should delete the entry as soon as we erase the custom variable off the body.
+
+
+<img width="1238" alt="image" src="https://user-images.githubusercontent.com/95692861/162587892-fb145b66-4a9e-4317-8fa9-432e4b3b81da.png">
+
+<img width="1238" alt="image" src="https://user-images.githubusercontent.com/95692861/162587918-f3843ad3-7047-45f6-81b2-5a332dfc7680.png">(Example of creating a custom variable)
+
+<img width="1238" alt="image" src="https://user-images.githubusercontent.com/95692861/162587964-133e821b-7213-4fdc-9edf-97cb3c4b716b.png">(Example of an inserted custom variable)
+
+
+
+
