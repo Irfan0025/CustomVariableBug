@@ -18,7 +18,7 @@ import {
     Tooltip,
     Typography,
     fp as _
-} from 'onsolve-ui-components';
+} from 'apple-ui-components';
 
 import {
     ActionsFooter,
@@ -619,7 +619,7 @@ const CreateAlertTemplate = ({
     }, [isBulletinBoard, isSmsOptIn]);
 
     return (
-        <Page className="onsolve-alerts-create">
+        <Page className="apple-alerts-create">
             <PageHeader
                 title={
                     <CreateAlertTitle
@@ -646,11 +646,11 @@ const CreateAlertTemplate = ({
             {isAlertSendSuccess && alertSendType === AlertSendType.SEND_NOW ? <Redirect to={baseUrl} /> : null}
             {(!isAlertSendSuccess || alertSendType === AlertSendType.SEND_TEST) && !isLoading && (
                 <>
-                    <div className="onsolve-alerts-create__container">
-                        <div className="onsolve-alerts-create__cards flex-grow-1 row">
+                    <div className="apple-alerts-create__container">
+                        <div className="apple-alerts-create__cards flex-grow-1 row">
                             <CreateAlertCard
                                 className="col-12 col-sm-6"
-                                imageClassName="onsolve-alerts-details"
+                                imageClassName="apple-alerts-details"
                                 title={intl.formatMessage(alertsTranslations.ng_alerts_alertDetails)}
                                 description={intl.formatMessage(alertsTranslations.ng_alerts_alertDetailsDescription)}
                                 onAddClick={navigateTo('details')}
@@ -669,7 +669,7 @@ const CreateAlertTemplate = ({
                                             />
                                             {canModifyAlert && (
                                                 <EditIconButton
-                                                    className="onsolve-alerts-create__edit-btn"
+                                                    className="apple-alerts-create__edit-btn"
                                                     onClick={onEdit}
                                                 />
                                             )}
@@ -679,7 +679,7 @@ const CreateAlertTemplate = ({
                             />
                             <CreateAlertCard
                                 className="col-12 col-sm-6"
-                                imageClassName="onsolve-alerts-recipients"
+                                imageClassName="apple-alerts-recipients"
                                 title={intl.formatMessage(commonTranslations.ng_common_recipients)}
                                 description={intl.formatMessage(alertsTranslations.ng_alerts_recipientsDescription)}
                                 onAddClick={canModifyAlert ? navigateTo('recipients') : () => {}}
@@ -697,11 +697,11 @@ const CreateAlertTemplate = ({
                                 status={<Status className="mt-3 mb-0" completed={!_.isEmpty(recipientsInfo)} />}
                             />
                         </div>
-                        <div className="onsolve-alerts-create__sub-cards row no-gutters">
+                        <div className="apple-alerts-create__sub-cards row no-gutters">
                             {showMessageResponseOptions && (
                                 <div className="col-12 col-sm px-1">
                                     <AlertOptionCard
-                                        className="onsolve-alerts-create-options__response"
+                                        className="apple-alerts-create-options__response"
                                         disabled={shouldDisableResponseOptionsForBulletinBoard}
                                         title={intl.formatMessage(sharedTranslations.ng_shared_responseOptions)}
                                         info={
@@ -738,7 +738,7 @@ const CreateAlertTemplate = ({
                             {_.get(orgSettings.locationOverride, 'isVisible', false) && (
                                 <div className="col-12 col-sm px-1">
                                     <AlertOptionCard
-                                        className="onsolve-alerts-create-options__delivery"
+                                        className="apple-alerts-create-options__delivery"
                                         disabled={areDeliveryMethodsDisabled}
                                         title={intl.formatMessage(alertsTranslations.ng_alerts_deliveryMethods)}
                                         info={
@@ -776,7 +776,7 @@ const CreateAlertTemplate = ({
                             )}
                             <div className="col-12 col-sm px-1">
                                 <AlertOptionCard
-                                    className="onsolve-alerts-create-options__advanced bg-gradient-grayish"
+                                    className="apple-alerts-create-options__advanced bg-gradient-grayish"
                                     title={intl.formatMessage(alertsTranslations.ng_alerts_advancedSettings)}
                                     info={intl.formatMessage(alertsTranslations.ng_alerts_advancedSettingsExplanation)}
                                     variant="dark"
@@ -797,7 +797,7 @@ const CreateAlertTemplate = ({
                             </div>
                         </div>
                     </div>
-                    <PaperFooter className="onsolve-alerts-create__footer">
+                    <PaperFooter className="apple-alerts-create__footer">
                         <ActionsFooter
                             leftActions={
                                 <Button
@@ -817,7 +817,7 @@ const CreateAlertTemplate = ({
                                 <>
                                     {sendTestEnabled && isSendAvailable && !isSentAlert && (
                                         <Tooltip
-                                            className="onsolve-alerts-create__tooltip"
+                                            className="apple-alerts-create__tooltip"
                                             disableHover={!isSendTestDisabled}
                                             title={
                                                 <FormattedMessage
