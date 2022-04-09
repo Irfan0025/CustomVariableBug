@@ -61,6 +61,8 @@ import { useModifyAlertAccess } from '../../hooks';
 
 import './CreateAlert.scss';
 
+const containsVariables = ({ variables = [] }) => variables.some(variable => variable.group === 'placeholder');
+
 // export let containsVariables = false;
 
 // const containsVariables=alertDetails.alertMessage.en_US.all;
